@@ -1,0 +1,725 @@
+
+
+/* Main Component, almost everything inherits from here */
+
+QWidget {
+  font-family: "RobotoMono Nerd Font Mono", "Roboto Mono", "Noto Color Emoji", "monospace", ;
+  font-size: 14px;
+  color: rgba(33, 31, 38, 1.00);
+  background-color: rgba(253, 252, 253, 1.00);
+  /* In lists when color is alternative for legibility */
+  alternate-background-color: rgba(250, 249, 251, 1.00);
+}
+
+QWidget::disabled {
+  color: rgba(101, 99, 109, 1.00);
+  border-color: rgba(219, 216, 224, 1.00);
+}
+
+QWidget::item:selected {
+background-color: rgba(235, 218, 202, 1.00);
+}
+
+QWidget::item:hover {
+  background-color: rgba(240, 228, 217, 1.00);
+}
+
+QWidget#HydrusAnimationBar {
+  qproperty-hab_border: rgba(208, 205, 215, 1.00);
+  qproperty-hab_background: rgba(142, 140, 153, 1.00);
+  qproperty-hab_nub: rgba(242, 239, 243, 1.00);
+}
+
+
+/* QFrame, almost everything is inside a frame */
+
+QFrame {
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px;
+  border-color: rgba(208, 205, 215, 1.00);
+}
+
+/* Menu Bar (QMenuBar) & Context Menu (QMenu) */
+
+QMenuBar, QMenu {
+  color: rgba(62, 51, 46, 1.00);
+  background-color: rgba(252, 249, 246, 1.00);
+  font-size: 12.25px;
+}
+
+QMenuBar::item, QMenu::item {
+  background: transparent;
+}
+
+QMenuBar::item:selected, QMenu::item:selected {
+  color: rgba(62, 51, 46, 1.00);
+  background-color: rgba(235, 218, 202, 1.00);
+}
+
+QMenuBar::item:disabled, QMenu::item:disabled {
+  color: rgba(129, 94, 70, 1.00);
+}
+
+QMenuBar::separator, QMenu::separator {
+  height: 1px;
+  background-color: rgba(220, 188, 159, 1.00);
+}
+
+/* Tables */
+
+QAbstractItemView {
+  color: rgba(33, 31, 38, 1.00);
+  background: rgba(252, 249, 246, 1.00);
+  alternate-background-color: rgba(246, 238, 231, 1.00);
+}
+
+QAbstractItemView::item:selected {
+  color: rgba(62, 51, 46, 1.00);
+  background-color: rgba(235, 218, 202, 1.00);
+}
+
+/* Table headers. */
+
+QHeaderView::section {
+  background-color: rgba(246, 238, 231, 1.00);
+  font-weight: bold;
+}
+
+QHeaderView::section:hover {
+  background-color: rgba(240, 228, 217, 1.00);
+}
+
+QHeaderView::section:selected {
+  background-color: rgba(235, 218, 202, 1.00);
+}
+
+/* ComboBox - Drop-down button field. The pop-up menu is a separate list object. */
+
+QComboBox {
+  /* Undocumented property! combobox-popup: [boolean] */
+  /* Which style of popup list to use. Fusion defaults to 1. */
+  /* Disabled due to buggy behavior. */
+  combobox-popup: 0;
+
+  color: rgba(173, 127, 88, 1.00);
+  background-color: rgba(246, 238, 231, 1.00);
+  border: 1px solid rgba(220, 188, 159, 1.00);
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  overflow: hidden;
+
+  font-weight: bold;
+}
+
+QComboBox:hover {
+  background-color: rgba(240, 228, 217, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QComboBox:on {
+  background-color: rgba(235, 218, 202, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QComboBox:disabled {
+  color: rgba(242, 239, 243, 1.00);
+  background-color:rgba(250, 249, 251, 1.00);
+  border-color: rgba(242, 239, 243, 1.00);
+}
+
+QComboBox::drop-down {
+  color: rgba(173, 127, 88, 1.00);
+  background-color: rgba(246, 238, 231, 1.00);
+  border: 0px solid transparent;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 4px 4px 4px 4px;
+}
+
+QComboBox::drop-down:hover {
+  background-color: rgba(240, 228, 217, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QComboBox::drop-down:on {
+  background-color: rgba(235, 218, 202, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QComboBox::drop-down:disabled {
+  color: rgba(242, 239, 243, 1.00);
+  background-color:rgba(250, 249, 251, 1.00);
+  border-color: rgba(242, 239, 243, 1.00);
+}
+
+QComboBox::down-arrow {
+  image: url("static/qss/resources/chevron-down.svg");
+  width: 8px;
+  height: 8px;
+}
+
+/* Buttons */
+
+QPushButton {
+  color: rgba(173, 127, 88, 1.00);
+  background-color: rgba(246, 238, 231, 1.00);
+  border: 1px solid rgba(220, 188, 159, 1.00);
+
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+
+  font-weight: bold;
+}
+
+QPushButton:hover {
+  background-color: rgba(240, 228, 217, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QPushButton:pressed {
+  background-color: rgba(235, 218, 202, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QPushButton:disabled {
+  color: rgba(242, 239, 243, 1.00);
+  background-color:rgba(250, 249, 251, 1.00);
+  border-color: rgba(242, 239, 243, 1.00);
+}
+
+QPushButton#HydrusAccept {
+  color: rgba(251, 254, 252, 1.00);
+  background-color: rgba(48, 164, 108, 1.00);
+  border-color: rgba(142, 206, 170, 1.00);
+}
+
+QPushButton#HydrusAccept:hover {
+  background-color: rgba(43, 154, 102, 1.00);
+  border-color: rgba(91, 185, 139, 1.00);
+}
+
+QPushButton#HydrusAccept:pressed {
+  background-color: rgba(43, 154, 102, 1.00);
+  border-color: rgba(91, 185, 139, 1.00);
+}
+
+QPushButton#HydrusCancel {
+  color: rgba(255, 252, 252, 1.00);
+  background-color: rgba(229, 72, 77, 1.00);
+  border-color: rgba(244, 169, 170, 1.00);
+}
+
+QPushButton#HydrusCancel:hover {
+  background-color: rgba(220, 62, 66, 1.00);
+  border-color: rgba(235, 142, 144, 1.00);
+}
+
+QPushButton#HydrusCancel:pressed {
+  background-color: rgba(220, 62, 66, 1.00);
+  border-color: rgba(235, 142, 144, 1.00);
+}
+
+QPushButton#HydrusOnOffButton[hydrus_on=true] {
+  color: rgba(254, 253, 252, 1.00);
+  background-color: rgba(173, 127, 88, 1.00);
+  border-color: rgba(220, 188, 159, 1.00);
+}
+
+QPushButton#HydrusOnOffButton[hydrus_on=true]:hover {
+  color: rgba(254, 253, 252, 1.00);
+  background-color: rgba(160, 117, 83, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QPushButton#HydrusOnOffButton[hydrus_on=true]:pressed {
+  color: rgba(254, 253, 252, 1.00);
+  background-color: rgba(160, 117, 83, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+  
+}
+
+QPushButton#HydrusOnOffButton[hydrus_on=false] {
+  color: rgba(173, 127, 88, 1.00);
+  background-color: rgba(254, 253, 252, 1.00);
+  border-color: rgba(220, 188, 159, 1.00);
+}
+
+QPushButton#HydrusOnOffButton[hydrus_on=false]:hover {
+  color: rgba(173, 127, 88, 1.00);
+  background-color: rgba(252, 249, 246, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+  
+}
+
+QPushButton#HydrusOnOffButton[hydrus_on=false]:pressed {
+  color: rgba(173, 127, 88, 1.00);
+  background-color: rgba(252, 249, 246, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+
+/* CheckBox */
+
+QCheckBox {
+  color: rgba(33, 31, 38, 1.00);
+  background: transparent;
+  spacing: 5px;
+}
+
+QCheckBox::indicator {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(220, 188, 159, 1.00);
+  background-color: rgba(242, 239, 243, 1.00);
+}
+
+QCheckBox::indicator:hover {
+  background-color: rgba(234, 231, 236, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QCheckBox::indicator:disabled {
+  background-color: transparent;
+  border-color: rgba(219, 216, 224, 1.00);
+}
+
+QCheckBox::indicator:checked {
+  background-color: rgba(227, 223, 230, 1.00);
+  image: url("static/qss/resources/check.svg");
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QCheckBox#HydrusWarning {
+  color: rgba(229, 72, 77, 1.00);
+  background: transparent;
+}
+
+/* QRadioButton */
+
+QRadioButton {
+  color: rgba(33, 31, 38, 1.00);
+  background: rgba(242, 239, 243, 1.00);
+  spacing: 5px;
+}
+
+QRadioButton::indicator {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(220, 188, 159, 1.00);
+}
+
+QRadioButton::indicator:hover {
+  background-color: rgba(234, 231, 236, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QRadioButton::indicator:disabled {
+  background-color: transparent;
+  border-color: rgba(219, 216, 224, 1.00);
+}
+
+QRadioButton::indicator:checked {
+  background-color: rgba(227, 223, 230, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+  image: url("static/qss/resources/check.svg");
+}
+
+/* Scroll Bar */
+
+QScrollBar {
+  background-color: rgba(250, 249, 251, 1.00);
+}
+
+QScrollBar:vertical {
+  width: 9px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+QScrollBar::handle:vertical {
+  height: 9px;
+  margin-left: 9px;
+  margin-right: 9px;
+}
+
+QScrollBar::handle {
+  background-color: rgba(246, 238, 231, 1.00);
+}
+
+QScrollBar::handle:hover {
+  background-color: rgba(240, 228, 217, 1.00);
+}
+
+QScrollBar::handle:pressed {
+  background-color: rgba(235, 218, 202, 1.00);
+}
+
+QScrollBar::sub-line,
+QScrollBar::add-line {
+  background-color: rgba(246, 238, 231, 1.00);
+}
+QScrollBar::sub-line:hover,
+QScrollBar::add-line:hover  {
+  background-color: rgba(240, 228, 217, 1.00);
+}
+QScrollBar::sub-line:pressed,
+QScrollBar::add-line:pressed {
+  background-color: rgba(235, 218, 202, 1.00);
+}
+
+QScrollBar::add-line:vertical {
+  height: 9px;
+  subcontrol-position: bottom;
+  subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+  height: 9px;
+  subcontrol-position: top;
+  subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal {
+  width: 9px;
+  subcontrol-position: right;
+  subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+  width: 9px;
+  subcontrol-position: left;
+  subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+  background: transparent;
+}
+
+/* Number and date box */
+
+QSpinBox,
+QDateTimeEdit {
+  color: rgba(62, 51, 46, 1.00);
+  background: rgba(242, 239, 243, 1.00);
+  border: 1px solid rgba(220, 188, 159, 1.00);
+  placeholder-text-color: rgba(129, 94, 70, 1.00);
+  selection-background-color: rgba(240, 228, 217, 1.00);
+  border-radius: 4px;
+  padding: 2px 4px 2px 4px;
+}
+
+QSpinBox:hover,
+QDateTimeEdit:hover {
+  background: rgba(234, 231, 236, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QSpinBox:pressed,
+QDateTimeEdit:pressed {
+  background: rgba(227, 223, 230, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QSpinBox:disabled,
+QDateTimeEdit:disabled {
+  color: rgba(101, 99, 109, 1.00);
+  background: rgba(250, 249, 251, 1.00);
+  border-color: rgba(219, 216, 224, 1.00);
+}
+
+QSpinBox::up-button,
+QDateTimeEdit::up-button,
+QSpinBox::down-button,
+QDateTimeEdit::down-button {
+  background: rgba(246, 238, 231, 1.00);
+  width: 18px;
+  border-color: rgba(220, 188, 159, 1.00);
+  border-style: solid;
+}
+
+QSpinBox::up-button,
+QDateTimeEdit::up-button {
+  subcontrol-origin: border;
+  subcontrol-position: top right;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+}
+
+QSpinBox::down-button,
+QDateTimeEdit::down-button{
+  subcontrol-origin: border;
+  subcontrol-position: bottom right;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+  border-bottom-right-radius: 4px;
+}
+
+QSpinBox::up-button:hover,
+QDateTimeEdit::up-button:hover,
+QSpinBox::down-button:hover,
+QDateTimeEdit::down-button:hover {
+  background: rgba(240, 228, 217, 1.00);
+}
+
+
+QSpinBox::up-button:pressed,
+QDateTimeEdit::up-button:pressed,
+QSpinBox::down-button:pressed,
+QDateTimeEdit::down-button:pressed {
+  background: rgba(235, 218, 202, 1.00);
+}
+
+
+QSpinBox::up-button:disabled,
+QDateTimeEdit::up-button:disabled,
+QSpinBox::down-button:disabled,
+QDateTimeEdit::down-button:disabled {
+  background: rgba(252, 249, 246, 1.00);
+  border-color: rgba(219, 216, 224, 1.00);
+}
+
+QSpinBox::up-arrow,
+QDateTimeEdit::up-arrow {
+  image: url("static/qss/resources/chevron-up.svg");
+  width: 8px;
+  height: 8px;
+}
+
+QSpinBox::down-arrow,
+QDateTimeEdit::down-arrow {
+  image: url("static/qss/resources/chevron-down.svg");
+  width: 8px;
+  height: 8px;
+}
+
+/* Text box */
+
+QLineEdit, QTextEdit, QPlainTextEdit  {
+  color: rgba(142, 140, 153, 1.00);
+  background: rgba(242, 239, 243, 1.00);
+  border: 1px solid rgba(220, 188, 159, 1.00);
+  placeholder-text-color: rgba(129, 94, 70, 1.00);
+  selection-background-color: rgba(240, 228, 217, 1.00);
+  border-radius: 2px;
+  padding: 2px 4px 2px 4px;
+}
+
+QLineEdit:hover, QTextEdit:hover, QPlainTextEdit:hover {
+  background: rgba(234, 231, 236, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QLineEdit:pressed, QTextEdit:pressed, QPlainTextEdit:pressed {
+  background: rgba(227, 223, 230, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QLineEdit:disabled, QTextEdit:disabled, QPlainTextEdit:disabled {
+  color: rgba(101, 99, 109, 1.00);
+  background: transparent;
+  border-color: rgba(219, 216, 224, 1.00);
+}
+
+QLineEdit#HydrusValid,
+QTextEdit#HydrusValid,
+QPlainTextEdit#HydrusValid {
+  color: rgba(25, 59, 45, 1.00);
+  background: rgba(230, 246, 235, 1.00);
+  border-color: rgba(142, 206, 170, 1.00);
+}
+
+QLineEdit#HydrusValid:hover,
+QTextEdit#HydrusValid:hover,
+QPlainTextEdit#HydrusValid:hover {
+  background: rgba(214, 241, 223, 1.00);
+  border-color: rgba(91, 185, 139, 1.00);
+}
+
+QLineEdit#HydrusValid:pressed,
+QTextEdit#HydrusValid:pressed,
+QPlainTextEdit#HydrusValid:pressed {
+  background: rgba(196, 232, 209, 1.00);
+  border-color: rgba(91, 185, 139, 1.00);
+}
+
+QLineEdit#HydrusIndeterminate,
+QTextEdit#HydrusIndeterminate,
+QPlainTextEdit#HydrusIndeterminate {
+  color: rgba(62, 51, 46, 1.00);
+  background: rgba(246, 238, 231, 1.00);
+  border-color: rgba(220, 188, 159, 1.00);
+}
+
+QLineEdit#HydrusIndeterminate:hover,
+QTextEdit#HydrusIndeterminate:hover,
+QPlainTextEdit#HydrusIndeterminate:hover {
+  background: rgba(240, 228, 217, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QLineEdit#HydrusIndeterminate:pressed,
+QTextEdit#HydrusIndeterminate:pressed,
+QPlainTextEdit#HydrusIndeterminate:pressed {
+  background: rgba(235, 218, 202, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+QLineEdit#HydrusInvalid,
+QTextEdit#HydrusInvalid,
+QPlainTextEdit#HydrusInvalid {
+  color: rgba(100, 23, 35, 1.00);
+  background: rgba(254, 235, 236, 1.00);
+  border-color: rgba(244, 169, 170, 1.00);
+}
+
+/* Progress bar */
+
+QProgressBar {
+  color: rgba(253, 252, 253, 1.00);
+  background: rgba(242, 239, 243, 1.00);
+  text-align: center;
+  border-radius: 2px;
+}
+
+QProgressBar::chunk {
+  color: rgba(253, 252, 253, 1.00);
+  background-color: rgba(173, 127, 88, 1.00);
+}
+
+/* Tabs */
+
+QTabWidget::pane {
+  background: rgba(253, 252, 253, 1.00);
+  border: none;
+  padding: 4px;
+}
+
+QTabWidget::tab-bar {
+  border:none;
+  background: transparent;
+  left: 4px;
+  padding: 0px 4px;
+}
+
+QTabBar {
+  border: none;
+  background: transparent;
+}
+
+QTabBar::tab {
+  border: 1px solid rgba(220, 188, 159, 1.00);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  padding: 4px 6px 4px 6px;
+}
+
+QTabBar::tab:!selected {
+  background: rgba(253, 252, 253, 1.00);
+  color: rgba(129, 94, 70, 1.00);
+  font-weight: normal;
+}
+
+QTabBar::tab:!selected:hover {
+  background: rgba(250, 249, 251, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+
+QTabBar::tab:selected {
+  color: rgba(173, 127, 88, 1.00);
+  border-color: rgba(206, 163, 126, 1.00);
+  font-weight: bold;
+  border-bottom: none;
+}
+
+QTabBar::tab:disabled {
+  color: rgba(101, 99, 109, 1.00);
+  border-color: rgba(219, 216, 224, 1.00);
+}
+
+QTabBar::tab:pressed {
+  border-color: rgba(206, 163, 126, 1.00);
+}
+
+
+/* Unique */
+
+/* Labels */
+
+QLabel#HydrusValid {
+  color: rgba(48, 164, 108, 1.00);
+}
+
+QLabel#HydrusInvalid {
+  color: rgba(229, 72, 77, 1.00);
+}
+
+QLabel#HydrusIndeterminate {
+  color: rgba(62, 51, 46, 1.00);
+}
+
+QLabel#HydrusWarning {
+  background: rgba(254, 235, 236, 1.00);
+  color: rgba(100, 23, 35, 1.00);
+  border-radius: 2px;
+  padding: 2px 4px 2px 4px;
+}
+
+
+/* Tooltips */
+
+QToolTip {
+  color: rgba(33, 31, 38, 1.00);
+  background: rgba(242, 239, 243, 1.00);
+  border: 1px solid rgba(208, 205, 215, 1.00);
+  border-radius: 2px;
+  padding: 2px 4px 2px 4px;
+}
+
+/* Dialogs */
+
+QDialog {
+  background: rgba(253, 252, 253, 1.00);
+  border: 1px solid rgba(208, 205, 215, 1.00);
+  border-radius: 2px;
+}
+
+/* Locator aka Command Palette */
+
+QLocatorResultWidget#unselectedLocatorResult {
+  background: rgba(242, 239, 243, 1.00);
+}
+
+QLocatorResultWidget#selectedLocatorResult {
+  background: rgba(240, 228, 217, 1.00);
+}
+
+QWidget#HydrusMediaList {
+  qproperty-hmrp_background: rgba(250, 249, 251, 1.00);
+  qproperty-hmrp_thumbnail_local_background_normal: rgba(242, 239, 243, 1.00);
+  qproperty-hmrp_thumbnail_local_border_normal: rgba(208, 205, 215, 1.00);
+  qproperty-hmrp_thumbnail_local_background_selected: rgba(235, 218, 202, 1.00);
+  qproperty-hmrp_thumbnail_local_border_selected: rgba(206, 163, 126, 1.00);
+  qproperty-hmrp_thumbnail_not_local_background_normal: rgba(254, 235, 236, 1.00);
+  qproperty-hmrp_thumbnail_not_local_border_normal: rgba(244, 169, 170, 1.00);
+  qproperty-hmrp_thumbnail_not_local_background_selected: rgba(255, 205, 206, 1.00);
+  qproperty-hmrp_thumbnail_not_local_border_selected: rgba(235, 142, 144, 1.00);
+}
+
+QWidget#HydrusMediaViewer                                                                {
+  qproperty-hmv_background: rgba(250, 249, 251, 1.00);
+  qproperty-hmv_text: rgba(62, 51, 46, 1.00);
+}
+
+QWidget#HydrusTagAutocomplete {
+  qproperty-hta_background: rgba(250, 249, 251, 1.00);
+}
+
+QWidget#HydrusTagList {
+  qproperty-htl_background: rgba(250, 249, 251, 1.00);
+}
