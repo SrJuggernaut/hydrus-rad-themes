@@ -3,7 +3,7 @@
 /* Main Component, almost everything inherits from here */
 
 QWidget {
-  font-family: "RobotoMono Nerd Font Mono", "Roboto Mono", "Noto Color Emoji", "monospace", ;
+  font-family: "RobotoMono Nerd Font Propo", "Roboto Mono", "Noto Color Emoji", "monospace", ;
   font-size: 14px;
   color: rgba(238, 238, 238, 1.00);
   background-color: rgba(17, 17, 17, 1.00);

@@ -1,4 +1,4 @@
-import { readFile, writeFile, exists, mkdir, rmdir, cp } from 'fs/promises'
+import { readFile, writeFile, exists, mkdir, rmdir } from 'fs/promises'
 import nunjucks from 'nunjucks'
 import createColors, { type ThemeColors } from './createColors'
 import { amber, amberDark, blue, blueDark, bronze, bronzeDark, brown, brownDark, crimson, crimsonDark, cyan, cyanDark, gold, goldDark, grass, grassDark, gray, grayDark, green, greenDark, indigo, indigoDark, iris, irisDark, jade, jadeDark, lime, limeDark, mauve, mauveDark, mint, mintDark, olive, oliveDark, orange, orangeDark, pink, pinkDark, plum, plumDark, purple, purpleDark, red, redDark, ruby, rubyDark, sage, sageDark, sand, sandDark, sky, skyDark, slate, slateDark, teal, tealDark, tomato, tomatoDark, violet, violetDark, yellow, yellowDark } from '@radix-ui/colors'
@@ -10,7 +10,7 @@ const templateText = await readFile('./template.qss.njk', 'utf-8')
 /** Fonts */
 
 const fonts = [
-  'RobotoMono Nerd Font Mono',
+  'RobotoMono Nerd Font Propo',
   'Roboto Mono',
   'Noto Color Emoji',
   'monospace'
